@@ -18,6 +18,16 @@ def home():
   return render_template('home.html')
 
 
+@app.route('/directory_test')
+def directory_test():
+  return render_template('directory_test.html')
+
+
+@app.route('/directory')
+def directory():
+  return render_template('directory.html')
+
+
 @app.route('/test_file')
 def test_file():
   return render_template('test_file.html')
