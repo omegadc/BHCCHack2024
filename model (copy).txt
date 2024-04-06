@@ -1,0 +1,47 @@
+Here's a simple data model for students with contact information and their RSVP and attendance history for events:
+
+**Student Table:**
+- Student ID (Primary Key)
+- First Name
+- Last Name
+- Email
+- Phone Number
+
+**Event Table:**
+- Event ID (Primary Key)
+- Event Name
+- Event Date
+- Event Location
+- Event Description
+
+**RSVP Table:**
+- RSVP ID (Primary Key)
+- Student ID (Foreign Key)
+- Event ID (Foreign Key)
+- RSVP Status (e.g., Yes, No, Maybe)
+- RSVP Date
+
+**Attendance Table:**
+- Attendance ID (Primary Key)
+- Student ID (Foreign Key)
+- Event ID (Foreign Key)
+- Attendance Status (e.g., Attended, Did not attend)
+- Attendance Date
+Advisor Table:
+
+Advisor ID (Primary Key)
+First Name
+Last Name
+Email
+Phone Number
+Department (if applicable)
+Appointment Table:
+
+Appointment ID (Primary Key)
+Student ID (Foreign Key)
+Advisor ID (Foreign Key)
+Appointment Date
+Appointment Time
+Status (e.g., Booked, Completed, Canceled)
+
+This model allows you to track students, their contact information, events, RSVPs, and attendance. Each student can have multiple RSVPs and attendances associated with various events, and each event can have multiple attendees.

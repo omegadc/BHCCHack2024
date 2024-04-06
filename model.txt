@@ -1,0 +1,51 @@
+
+
+Student_Model: 
+
+student_id:
+student_firstname: 
+student_lastname: 
+class_standing: 
+contact:
+  perfered_contact: 
+  phone_number:
+  email: 
+events:[num]
+appointments:[num]
+class_enrolled:[num]
+classes_completed:[num] 
+student_status: 
+------------------------------------
+
+Advisor Model
+advisor_id:
+student_firstname: 
+student_lastname: 
+class_standing: 
+contact:
+  perfered_contact: 
+  phone_number:
+  email: 
+events:[num]
+appointments:[num]
+class_enrolled:[num]
+classes_completed:[num] 
+student_status: 
+
+
+
+
+Event Table:
+
+Event ID (Primary Key)
+Event Name
+Event Date
+Event Location
+Event Description
+
+RSVP ID (Primary Key)
+Student ID (Foreign Key)
+Event ID (Foreign Key)
+RSVP Status (e.g., Yes, No, Maybe)
+RSVP Date
+Advisor:[uuid]
