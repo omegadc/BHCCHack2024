@@ -1,12 +1,12 @@
 from flask import render_template, request
-from models import Person
+from models import Student
 
 def register_routes(app, db):
 
     @app.route('/')
     def index():
-        person = Person.query.all()
-        return str(person)
+        user = Student.query.all()
+        return str(user)
     
     @app.route('/home_test')
     def home_test():
