@@ -21,7 +21,7 @@ class Event(db.Model):
     # Date = db.Column(db.Datetime, nullable=False)
     Location = db.Column(db.Text,nullable=False)
     Description = db.Column(db.Text)
-
+    #from datetime import Date
     def __repr__(self):
         return f"Event{self.eventID}: {self.Name} and the location {self.Location} with a Description: {self.Description}."
 

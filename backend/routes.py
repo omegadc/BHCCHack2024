@@ -6,7 +6,7 @@ def register_routes(app, db):
     @app.route('/')
     def index():
         user = Student.query.all()
-        return str(user)
+        return render_template('index.html', users=user)
     
     @app.route('/home_test')
     def home_test():
