@@ -10,7 +10,7 @@ def register_routes(app, db):
     
     @app.route('/home_test')
     def home_test():
-        return render_template('home_test.html')
+        return render_template('base.html') #home_test.html
     
     @app.route('/home')
     def home():
