@@ -3,10 +3,26 @@ from models import Student
 
 def register_routes(app, db):
 
-    @app.route('/')
+    @app.route('/', methods=['GET','POST'])
     def index():
-        user = Student.query.all()
-        return render_template('index.html', users=user)
+        if request.method == 'GET':
+            user = Student.query.all()
+            return render_template('index.html', users=user)
+        elif request.method == 'POST':
+            # id = request.form.get('id')
+            studentID = request.form.get('name')
+            fName = request.form.get('firstName')
+            lName = request.form.get('lastName')
+            age = request.form.get('age')
+            email = request.form.get('email')
+            phonenum = request.form.get('phonenum')
+            student = Student(StudentID=studentID,firstName=fName,lastName=lName,
+                              age=age,email=email,phoneNumber=phonenum)
+            db.session.add(student)
+            db.session.commit()
+            user = Student.query.all()
+            return render_template('index.html', users=user)
+
     
     @app.route('/home_test')
     def home_test():

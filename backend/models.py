@@ -1,9 +1,10 @@
 from app import db
+from datetime import date
     
 class Student(db.Model):
     __tablename__ = 'students'
     id = db.Column(db.Integer, primary_key=True)
-    StudentID = db.Column(db.Integer, nullable=False)
+    StudentID = db.Column(db.Integer, primary_key=True, nullable=False)
     firstName = db.Column(db.Text, nullable=False)
     lastName = db.Column(db.Text, nullable=False)
     age = db.Column(db.Integer, nullable=False)

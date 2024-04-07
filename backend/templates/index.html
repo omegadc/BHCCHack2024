@@ -8,4 +8,14 @@
             <li>{{person}}</li>
         {% endfor %}
     </ul>
+
+    <h3>New Student</h3>
+    <form action="{{ url_for('index')}}" method="POST">
+        <input type="text" name="firstName" placeholder="firstName" required="required"><br>
+        <input type="text" name="lastName" placeholder="lastName" required="required"><br>
+        <input type="number" name="age" placeholder="Age" required="required"><br>
+        <input type="text" name="email" placeholder="Email" required="required"><br>
+        <input type="text" name="phonenum" placeholder="PhoneNumber" required="required"><br>
+        <input type="submit" value="Create">
+    </form>
 {% endblock %}
