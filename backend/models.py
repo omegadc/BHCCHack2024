@@ -1,17 +1,17 @@
 from app import db 
-from sqlalchemy import UniqueConstraint
+# from sqlalchemy import UniqueConstraint
 from datetime import date
     
 class Student(db.Model):
     __tablename__ = 'students'
     id = db.Column(db.Integer, primary_key=True)
-    StudentID = db.Column(db.Integer, nullable=False, unique=True)
+    StudentID = db.Column(db.Integer, nullable=False)
     firstName = db.Column(db.Text, nullable=False)
     lastName = db.Column(db.Text, nullable=False)
     age = db.Column(db.Integer, nullable=False)
     email = db.Column(db.Text, nullable=False)
     phoneNumber = db.Column(db.Text)
-    __table_args__ = (db.UniqueConstraint('StudentID','email'))
+    # __table_args__ = (db.UniqueConstraint('StudentID','email'))
 
     def __repr__(self):
         return f"Student full name is {self.firstName} {self.lastName} and their email is {self.email}, their age is {self.age}"

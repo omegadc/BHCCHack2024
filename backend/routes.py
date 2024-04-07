@@ -16,7 +16,7 @@ def register_routes(app, db):
             age = request.form.get('age')
             email = request.form.get('email')
             phonenum = request.form.get('phonenum')
-            student = Student(StudentID=studentID,firstName=fName,lastName=lName,
+            student = Student(firstName=fName,lastName=lName,
                               age=age,email=email,phoneNumber=phonenum)
             db.session.add(student)
             db.session.commit()
